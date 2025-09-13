@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog de Tecnología</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        /* Header */
+        
+        header {
+            background: linear-gradient(135deg, #007ACC, #00BFFF);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        /* Navegación */
+        
+        nav {
+            background: #005f99;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        nav button:hover {
+            background: #0077cc;
+        }
+        /* Secciones */
+        
+        section {
+            display: none;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        section.active {
+            display: block;
+        }
+        
+        section h2 {
+            color: #007ACC;
+            margin-bottom: 15px;
+        }
+        
+        section p {
+            line-height: 1.6;
+            font-size: 1.05em;
+        }
+        /* Artículos dentro de secciones */
+        
+        article {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            overflow: hidden;
+        }
+        
+        article:hover {
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+        }
+        
+        article img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        
+        article img:hover {
+            transform: scale(1.05);
+        }
+        
+        article h2 {
+            color: #007ACC;
+            margin-bottom: 15px;
+        }
+        
+        article p {
+            line-height: 1.6;
+            font-size: 1.05em;
+        }
+        /* Footer */
+        
+        footer {
+            background: #007ACC;
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+        }
+        
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive */
+        
+        @media(max-width:700px) {
+            nav {
+                flex-direction: column;
+            }
+            nav button {
+                margin: 5px 0;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mi Blog de Tecnología</h1>
+        <p>AFICCIONADA DE LA TECNOLOGÍA</p>
+    </header>
+
+    <nav>
+        <button onclick="mostrarSeccion('inicio')">Inicio</button>
+        <button onclick="mostrarSeccion('sobre-mi')">Sobre mí</button>
+        <button onclick="mostrarSeccion('mis-avances')">Mis avances</button>
+    </nav>
+
+    <!-- Secciones -->
+    <section id="inicio" class="active">
+        <h2>Inicio</h2>
+        <p>✨ ¡Bienvenid@s a mi blog de Tecnología! ✨ Este es un espacio donde comparto lo que voy aprendiendo sobre programación y el mundo digital. No sé todo (aún), pero me encanta la tecnología y quiero seguir creciendo y aprendiendo.</p>
+    </section>
+
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Me llamo Juliana, la mayoria me dicen Yami , tengo 17 años y me gusta mucho la informática y la tecnología. Aún estoy aprendiendo, pero me encanta descubrir cosas nuevas, especialmente en programación. Este blog es un espacio para compartir mi
+            proceso y crecer poco a poco en este mundo digital.</p>
+    </section>
+
+    <section id="mis-avances">
+        <!-- Artículo 1 -->
+        <article>
+            <img src="https://i.ytimg.com/vi/16eqVdm4Hio/maxresdefault.jpg" alt="Programación">
+            <h2>PROGRAMACION</h2>
+            <p>Mi avance en programación: Formularios en Visual Studio
+En estos días he estado aprendiendo a trabajar con formularios en Visual Studio. He conocido cómo diseñar la interfaz, agregar botones, cuadros de texto y conectar las acciones de los usuarios con código en C#.
+Crear formularios me ha ayudado a entender mejor cómo funcionan las aplicaciones de escritorio y cómo se pueden construir programas más interactivos y fáciles de usar.
+Este es solo el comienzo, pero me motiva mucho seguir aprendiendo más sobre programación y desarrollo de software.</p>
+        </article>
+
+        <!-- Artículo 2 -->
+        <article>
+            <img src="https://thumbnails.genially.com/61fa01e6b11ad10019ff32e4/screenshots/69060a13-bedd-4de1-a019-b3fb31a3e7db.jpg" alt="diseño">
+            <h2>Diseño web</h2>
+            <p>He comenzado a aprender sobre diseño de páginas web con HTML. Con HTML puedo estructurar el contenido de un sitio, agregar textos, imágenes y organizar la información de manera clara.
+Ahora mismo estoy avanzando con Visual Studio y ASP.NET, lo que me está permitiendo combinar el diseño con la programación para crear páginas más dinámicas e interactivas.
+Este aprendizaje me motiva mucho porque cada vez siento que estoy más cerca de construir sitios web completos y profesionales.</p>
+
+        <!-- Artículo 3 -->
+        <article>
+            <img src="https://tse1.mm.bing.net/th/id/OIP.maiZgl0MW1Z1u0Drhj5xgwHaHO?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Arduino">
+            <h2>Explorando la mecatronica con Arduino</h2>
+            <p>Por el momento solo he aprendido a codificar con Arduino Nano utilizando la aplicación de Arduino IDE.
+Con este microcontrolador he podido programar pequeñas tareas y experimentar con la conexión de sensores y componentes electrónicos.
+Trabajar con Arduino me ha permitido entender cómo la programación y la electrónica se combinan para dar vida a proyectos prácticos e innovadores. Es un primer paso en el mundo de la mecatrónica, que me motiva a seguir explorando más sobre robótica y automatización.</p>
+        </article>
+    </section>
+
+    <footer>
+        &copy; 2025 Mi Blog de Tecnología | Sígueme en
+        <a href="https://www.tiktok.com/@yamii_bah" target="_blank">TikTok</a>
+
+    </footer>
+
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('section');
+            secciones.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
